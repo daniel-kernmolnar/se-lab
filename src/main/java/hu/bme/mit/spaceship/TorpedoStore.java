@@ -37,11 +37,13 @@ public class TorpedoStore {
 
     boolean success = false;
 
-    // simulate random overheating of the launcher bay which prevents firing
+    // simulate random overheating of the launch .er bay which prevents firing
     double r = generator.nextDouble();
 
+    
     if (r >= FAILURE_RATE) {
       // successful firing
+      // Téves reláció.
       this.torpedoCount -= numberOfTorpedos;
       success = true;
     } else {
